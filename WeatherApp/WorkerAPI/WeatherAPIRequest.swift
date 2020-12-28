@@ -13,7 +13,7 @@ class WeatherService {
     typealias success = (weather) -> ()
     static func getWeather(cityName: String, onSucess: @escaping success) {
         
-        let API_KEY = "45bbdedbfe9401d6be87e12dfece6c0d"
+        let API_KEY = ""
         if let url = URL(string: "http://api.weatherstack.com/current?access_key=\(API_KEY)&query=\(cityName)") {
             
             URLSession.shared.dataTask(with: url) { (data, response, error) in
